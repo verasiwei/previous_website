@@ -93,7 +93,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '6.4.2',
-    sidebar: {"position":"left","width":350,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","width":320,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -180,6 +180,7 @@
     }
   </style>
 </noscript>
+
 
 </head>
 
@@ -338,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/27/ggplot-cheat-sheet/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -358,8 +359,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/25/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2018/10/27/ggplot-cheat-sheet/" itemprop="url">
+                  ggplot cheat sheet
                 </a>
               
             
@@ -385,12 +386,34 @@
                 
               
 
-              <time title="Created: 2018-10-25 21:52:41" itemprop="dateCreated datePublished" datetime="2018-10-25T21:52:41-05:00">2018-10-25</time>
+              <time title="Created: 2018-10-27 13:13:58 / Modified: 13:14:38" itemprop="dateCreated datePublished" datetime="2018-10-27T13:13:58-05:00">2018-10-27</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -421,16 +444,711 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>#ggplot2 cheatsheet<br>ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame())</p>
+<h2 id="one-variable"><a href="#one-variable" class="headerlink" title="one variable:"></a>one variable:</h2><p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+<br>geom_area(aes(y=..density..),stat=�bin�) #with shadow</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,weight=))+<br>geom_density(aes(y=..county..,),kernel=�gaussian�) #without shadow</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,))+<br>+geom_dotplot()#plot dots</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,weight-))+<br>+geom_histogram(aes(y=..density..),binwidth=5)</p>
+<h2 id="two-variables"><a href="#two-variables" class="headerlink" title="two variables"></a>two variables</h2><h3 id="continuous-X-continuous-Y"><a href="#continuous-X-continuous-Y" class="headerlink" title="continuous X, continuous Y"></a>continuous X, continuous Y</h3><p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,shape=,size=,))+<br>geom_jitter() #jittering is adding a small amount of random noise to data, it is often used to spread out points that would otherwise<br>be overplotted</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,shape=,size=,))+<br>geom_point()</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,linetype=,size=,weight=))+<br>geom_quantile()</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,lintype=,size=,))+<br>geom_rug(sides=�bl�)</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,weight=))+<br>geom_smooth(model=lm)</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,label=,alpha=,angle=,color=,family=,fontface=,hjust=,lineheight=,size=,vjust=))+<br>geom_text(aes(label=cty))</p>
+<p>###continuous bivariate distribution<br>ggplot(data=NULL,mapping=aes(xmax=,xmin=,ymax=,ymin=,alpha=,color=,fill=,linetype=,size=,weight=))+<br>geom_bin2d()</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,linetype=,size=,))+<br>geom_density2d()</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,size=,))+<br>geom_hex()</p>
+<p>###discrete X, continuous Y<br>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,lintype=,size=,weight=))+<br>geom_bar(stat=�identity�)</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,shape=,size=,))+<br>geom_boxplot(lower=,middle=,upper=,x=,ymax=,ymin=,alpha=,color=,fill=,linetype=,shape=,size=,weight=)</p>
+<p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=))+<br>geom_dotplot(binaxis=�y�,stackdir=�center�)</p>
+<p>##visualizing error<br>ggplot(data=NULL,aes(x=,y=,ymin=,ymax=,alpha=,color=,fill=,linetype=,size=))+<br>geom_crossbar(fatten=2)</p>
+<p>ggplot(data=NULL,aes(x=,ymin=,ymax=,alpha=,color=,linetype=,size=,width=))+<br>geom_errorbar()</p>
+<p>ggplot(data=NULL,aes(x=,ymin=,ymax=,alpha=,color=,linetype=,size=))+<br>geom_linerange()</p>
+<p>ggplot(data=NULL,aes(x=,y=,ymin=,ymax=,alpha=,color=,fill=,linetype=,shape=,size=))+<br>geom_pointrange()</p>
+<p>##Stats:<br>some plots visualize a transformation of the original data set, each stats creates additional variables to map aesthetics to<br>stat_smooth(method=��,formula=)<br>method: datasets with n&lt;1000, use loess, n&gt;1000, use gam<br>how to define smooths in gam formulae???<br>s(�,k=1,fx=FALSE,bs=�tp�)<br>� represents a list of variables that are the covariates that this smooth is a function of<br>k is the dimension of the basis used to represent the smooth term<br>fx is whether the term is a fixed d.f. regression spline<br>bs is a two letter charater string indicating the penalized smoothing basis(smooth terms in GAM)<br>thin plate regression spline: tp;<br>duchon splines: ds<br>cubic regression splines: cr,cs,cc<br>splines on the sphere: sos<br>P-splines: ps<br>Random effects: re<br>Markov Random Fields: mrf<br>Gaussian process smooths: gp<br>soap film smooths: so, sf, sw</p>
+<p>thin plate regression splines gives the best MSE performance but slower, the knot based penalized cubic regression splines is the second<br>best<br><a href="https://www.rdocumentation.org/packages/mgcv/versions/1.8-24/topics/smooth.terms" target="_blank" rel="noopener">https://www.rdocumentation.org/packages/mgcv/versions/1.8-24/topics/smooth.terms</a></p>
+<p>##Scales<br>scales control how a plot maps data values to the visual values of an aesthetic<br>scale_fill_manual(<br>values=c(),<br>limits=c(),<br>breaks=c(),<br>name=��,<br>labels=c())specify the own set of mappings from levels in the data to aesthetic values;<br>scale_x_continuous():<br>set the range and the breaks for xaxis, map x values to visual values<br>scale_color_manual():<br>mapped colors for values</p>
+<p>##themes<br>theme_bw():<br>a theme with white background and black gridlines<br>theme():<br>theme(axis.text.x=element_text(size= , angle= , hjust= ):<br>when there are many x axis coordinates, a big issue is that they will be overlapped, so change the angle of x axis coordinates and horizontal justification</p>
+<p>##Faceting<br>divide a plot into subplots based on the values of one or more discrete variables<br>facet_wrap(~fl): wraps a 1d sequence of panels into 2d(wrap facets into a rectangular layout)</p>
+<p>##Legends<br>place legend at �bottom�,�top�,�left�, or �right�<br>ggplot()+geom_point()+theme(legend.position)<br>ggplot()+geom_point()+guides(color=�none�)<br>ggplot()+geom_point()+scale_fill_discrete(name=�Title�,labels=c(�A�,�B�,�C�))</p>
+<p>#some other functions not related to ggplot<br>gsub(): replaces all matches of a string<br>with(): for example, with(mtcars,summary(mpg)) �&gt; to calculate the summary statistics of mpg in mtcars data, return the summary statistic<br>cut():cut into different intervals<br>melt():transform the wide format to long format; when does it need to transform to long format? when there are group factors<br>subset():subset datas of what you are interested in!</p>
 
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/27/apply-functions-in-R/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="Of Course, I still Love You.
+--Elon Musk">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siwei Zhang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/27/apply-functions-in-R/" itemprop="url">
+                  apply functions in R
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-27 13:12:34 / Modified: 13:27:30" itemprop="dateCreated datePublished" datetime="2018-10-27T13:12:34-05:00">2018-10-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>It takes a lot of time to run for loop, apply function is different and based on C language, which saves a lot of time.</p>
+<p>#apply family</p>
+<p>##apply</p>
+<p>##lapply</p>
+<p>##sapply</p>
+<p>##vapply</p>
+<p>##mapply</p>
+<p>##tapply</p>
+<p>##rapply</p>
+<p>##eapply</p>
+<p>1?tapply; apply<br>2?mapply<br>3?lapply�&gt;sapply�&gt;vapply<br>�&gt;rapply<br>4.eapply</p>
+<p>#apply<br>apply() can be applied to matrix, dataframe, array<br>apply(X,MARGIN,FUN,�), X: dataframe,matrix,array; MARGIN: applied to rows when =1, applied to columns when =2; FUN: function that apply to the data</p>
+<p>#lapply<br>apply a given function to every element of a list and obtain a list as result, it can be applied to dataframes, lists or vectors, the output<br>return to a list<br>lapply(X,FUN,�)<br>lapply cannot be applied to vector or matrix</p>
+<p>#sapply<br>similar to lapply, but return to vector, not list<br>sapply(X,FUN,�,simplify=TRUE,USE.NAMES=TRUE)<br>X can be array, matrix, dataframe<br>simplify: whether to array<br>USE.NAMES: if X is a string, then TRUE set string as the data name<br>if simplify=FALSE and USE.NAMES=FALSE, then sapply is equal to lapply<br>if simplify=�array� then can create matrixes<br>if USE.NAMES=TRUE, then can create data name</p>
+<p>#vapply<br>it is similar to sapply<br>vapply(X,FUN,FUN.VALUE,�,USE.NAMES=TRUE)</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/Beta-Mixture/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="Of Course, I still Love You.
+--Elon Musk">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siwei Zhang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/Beta-Mixture/" itemprop="url">
+                  Beta Mixture
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-26 22:51:42" itemprop="dateCreated datePublished" datetime="2018-10-26T22:51:42-05:00">2018-10-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-27 12:44:28" itemprop="dateModified" datetime="2018-10-27T12:44:28-05:00">2018-10-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Statistics-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Statistics & Algorithms</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Beta-Mixture"><a href="#Beta-Mixture" class="headerlink" title="Beta Mixture"></a>Beta Mixture</h2><p>I focused on mixture model last month, but unluckily this model did not fit very well for our data and the robust estimation is much more stable. But I still made some summary for the algorithm of beta mixture model. Click on the attached link below.</p>
+<a href="/2018/10/26/Beta-Mixture/new_report.pdf" title="Beta Mixture Model">Beta Mixture Model</a>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/Topic-Model-in-EMR-project/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="Of Course, I still Love You.
+--Elon Musk">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siwei Zhang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/Topic-Model-in-EMR-project/" itemprop="url">
+                  Topic Model in EMR project
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-26 21:51:48 / Modified: 22:41:17" itemprop="dateCreated datePublished" datetime="2018-10-26T21:51:48-05:00">2018-10-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/My-Teamwork-Projects/" itemprop="url" rel="index"><span itemprop="name">My Teamwork Projects</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Supervised-Topic-Model-Project"><a href="#Supervised-Topic-Model-Project" class="headerlink" title="Supervised Topic Model Project"></a>Supervised Topic Model Project</h2><p>I did this project during my summer intern in 2017 at Duke. It was the first time I got the knowledge of Electronic Medical Record and ICD-9 codes. We focused on Duke Medical Center Electronic Medical Records from 2004 to 2013 of 210,329 patients with 10,804 unique ICD9 diagnosis codes records for each patient. The algorithm I used is the supervised Latent Dirichlet Allocation(supvised topic model). The attached is the poster of this project.</p>
+<object data="https://bigdata.duke.edu/sites/bigdata.duke.edu/files/site-images/Team11ExecSummSlides_0.pdf" type="application/pdf" width="700px" height="700px"><br>    <embed src="https://bigdata.duke.edu/sites/bigdata.duke.edu/files/site-images/Team11ExecSummSlides_0.pdf"><br>        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://bigdata.duke.edu/sites/bigdata.duke.edu/files/site-images/Team11ExecSummSlides_0.pdf" target="_blank" rel="noopener">Download PDF</a>.</p><br>    <br></object>
+
+
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/26/Generalized-Additive-Model/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="Of Course, I still Love You.
+--Elon Musk">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Siwei Zhang">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/Generalized-Additive-Model/" itemprop="url">
+                  Generalized Additive Model
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-10-26 21:43:45" itemprop="dateCreated datePublished" datetime="2018-10-26T21:43:45-05:00">2018-10-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-27 12:44:43" itemprop="dateModified" datetime="2018-10-27T12:44:43-05:00">2018-10-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Statistics-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Statistics & Algorithms</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
           
         
       
@@ -512,12 +1230,29 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
 
               
@@ -526,6 +1261,20 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/verasiwei" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:verasiwei@hotmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -578,6 +1327,24 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -625,6 +1392,8 @@
 
 
 
+  
+
 
 
 
@@ -650,6 +1419,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
