@@ -115,17 +115,17 @@
 
 
 
-  <meta name="description" content="#ggplot2 cheatsheetggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..dens">
+  <meta name="description" content="#ggplot2 cheatsheet`ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..den">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ggplot cheat sheet">
 <meta property="og:url" content="http://yoursite.com/2018/10/27/ggplot-cheat-sheet/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="#ggplot2 cheatsheetggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..dens">
+<meta property="og:description" content="#ggplot2 cheatsheet`ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..den">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-27T18:14:38.383Z">
+<meta property="og:updated_time" content="2018-10-30T03:53:29.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ggplot cheat sheet">
-<meta name="twitter:description" content="#ggplot2 cheatsheetggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..dens">
+<meta name="twitter:description" content="#ggplot2 cheatsheet`ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame()) one variable:ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+geom_area(aes(y=..den">
 
 
 
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="Created: 2018-10-27 13:13:58 / Modified: 13:14:38" itemprop="dateCreated datePublished" datetime="2018-10-27T13:13:58-05:00">2018-10-27</time>
+              <time title="Created: 2018-10-27 13:13:58" itemprop="dateCreated datePublished" datetime="2018-10-27T13:13:58-05:00">2018-10-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-10-29 22:53:29" itemprop="dateModified" datetime="2018-10-29T22:53:29-05:00">2018-10-29</time>
               
             
           </span>
@@ -456,7 +468,7 @@
       
 
       
-        <p>#ggplot2 cheatsheet<br>ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame())</p>
+        <p>#ggplot2 cheatsheet<br>`ggplot(data=NULL,mapping=aes(x=,y=,color=,),environment=parent.frame())</p>
 <h2 id="one-variable"><a href="#one-variable" class="headerlink" title="one variable:"></a>one variable:</h2><p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,))+<br>geom_area(aes(y=..density..),stat=�bin�) #with shadow</p>
 <p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,linetype=,size=,weight=))+<br>geom_density(aes(y=..county..,),kernel=�gaussian�) #without shadow</p>
 <p>ggplot(data=NULL,mapping=aes(x=,y=,alpha=,color=,fill=,))+<br>+geom_dotplot()#plot dots</p>
@@ -483,7 +495,7 @@
 <p>##themes<br>theme_bw():<br>a theme with white background and black gridlines<br>theme():<br>theme(axis.text.x=element_text(size= , angle= , hjust= ):<br>when there are many x axis coordinates, a big issue is that they will be overlapped, so change the angle of x axis coordinates and horizontal justification</p>
 <p>##Faceting<br>divide a plot into subplots based on the values of one or more discrete variables<br>facet_wrap(~fl): wraps a 1d sequence of panels into 2d(wrap facets into a rectangular layout)</p>
 <p>##Legends<br>place legend at �bottom�,�top�,�left�, or �right�<br>ggplot()+geom_point()+theme(legend.position)<br>ggplot()+geom_point()+guides(color=�none�)<br>ggplot()+geom_point()+scale_fill_discrete(name=�Title�,labels=c(�A�,�B�,�C�))</p>
-<p>#some other functions not related to ggplot<br>gsub(): replaces all matches of a string<br>with(): for example, with(mtcars,summary(mpg)) �&gt; to calculate the summary statistics of mpg in mtcars data, return the summary statistic<br>cut():cut into different intervals<br>melt():transform the wide format to long format; when does it need to transform to long format? when there are group factors<br>subset():subset datas of what you are interested in!</p>
+<p>#some other functions not related to ggplot<br>gsub(): replaces all matches of a string<br>with(): for example, with(mtcars,summary(mpg)) �&gt; to calculate the summary statistics of mpg in mtcars data, return the summary statistic<br>cut():cut into different intervals<br>melt():transform the wide format to long format; when does it need to transform to long format? when there are group factors<br>subset():subset datas of what you are interested in`</p>
 
       
     </div>
@@ -520,6 +532,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/29/mushroom-prediction/" rel="prev" title="mushroom prediction">
+                mushroom prediction <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -590,7 +606,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
