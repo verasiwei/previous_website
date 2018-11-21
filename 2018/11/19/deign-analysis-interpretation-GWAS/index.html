@@ -125,7 +125,7 @@
 <meta property="og:image" content="http://yoursite.com/images/chr1.jpg">
 <meta property="og:image" content="http://yoursite.com/images/strand.jpg">
 <meta property="og:image" content="http://yoursite.com/images/allele_snp.jpg">
-<meta property="og:updated_time" content="2018-11-20T18:36:32.402Z">
+<meta property="og:updated_time" content="2018-11-21T17:48:07.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deign_analysis_interpretation_GWAS">
 <meta name="twitter:description" content="Notes for the book: Design, Analysis, and Interpretation of Genome-Wide Association Scans Introduction:Charles Darwin’s workLed most directly to the field of genetics, which is the theory of evolution">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-11-20 12:36:32" itemprop="dateModified" datetime="2018-11-20T12:36:32-06:00">2018-11-20</time>
+                <time title="Modified: 2018-11-21 11:48:07" itemprop="dateModified" datetime="2018-11-21T11:48:07-06:00">2018-11-21</time>
               
             
           </span>
@@ -483,6 +483,9 @@
 <h3 id="Basic-Genomics"><a href="#Basic-Genomics" class="headerlink" title="Basic Genomics:"></a>Basic Genomics:</h3><p>dbSNP: SNPs and other variants are reported.<br>UCSC Genome Browser: tools and datasets compiling sequence information for many genome. The blat tool maps sequences to genome location and strand is also available?<br>1000 Genomes Project website: Results of next generation sequencing of 1092 individuals from a variety of racial ethnic groups of similar diversity as HapMap phase 3. I use this datasets as a reference panel for imputation in GWAS study.</p>
 <h3 id="My-understanding"><a href="#My-understanding" class="headerlink" title="My understanding"></a>My understanding</h3><p>Human is diploid, 23 pairs of chromosomes, if both alleles of a human are the same, he is homozygous at that locus, otherwise it is heterozygous due to the existence of SNP. Assume on one loci of a chromosome, the base is T, normally if there is no polymorphism, it should also be T on the alleles because one from mother, one from father, if there is no SNP in the population, they should be same, but when there exists SNP, the genotype might be TC,TA,TG,CC,AA,GG.</p>
 <p><img src="/images/allele_snp.jpg" alt=""></p>
+<h3 id="Quality-Control"><a href="#Quality-Control" class="headerlink" title="Quality Control"></a>Quality Control</h3><ol>
+<li>Sample Level<br>From my own experience, it is very important to control the sample level, otherwise after you completing the whole GWAS, you will notice from the manhattan plot, some dots(variants) will suddenly jump to very abnormal level.<br>1) IBD(Identity by Descent):</li>
+</ol>
 
       
     </div>
@@ -670,7 +673,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Charles-Darwin’s-work"><span class="nav-number">1.1.</span> <span class="nav-text">Charles Darwin’s work</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fundamental-to-the-emergence-of-modern-genetics-was-the-discovery-by-Gregor-Mendel"><span class="nav-number">1.2.</span> <span class="nav-text">Fundamental to the emergence of modern genetics was the discovery by Gregor Mendel:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-of-Chromosomes"><span class="nav-number">1.3.</span> <span class="nav-text">Organization of Chromosomes:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-of-DNA"><span class="nav-number">1.4.</span> <span class="nav-text">Organization of DNA:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Types-of-Genetic-Variation"><span class="nav-number">1.5.</span> <span class="nav-text">Types of Genetic Variation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Genomics"><span class="nav-number">1.6.</span> <span class="nav-text">Basic Genomics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#My-understanding"><span class="nav-number">1.7.</span> <span class="nav-text">My understanding</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Charles-Darwin’s-work"><span class="nav-number">1.1.</span> <span class="nav-text">Charles Darwin’s work</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fundamental-to-the-emergence-of-modern-genetics-was-the-discovery-by-Gregor-Mendel"><span class="nav-number">1.2.</span> <span class="nav-text">Fundamental to the emergence of modern genetics was the discovery by Gregor Mendel:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-of-Chromosomes"><span class="nav-number">1.3.</span> <span class="nav-text">Organization of Chromosomes:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Organization-of-DNA"><span class="nav-number">1.4.</span> <span class="nav-text">Organization of DNA:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Types-of-Genetic-Variation"><span class="nav-number">1.5.</span> <span class="nav-text">Types of Genetic Variation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Genomics"><span class="nav-number">1.6.</span> <span class="nav-text">Basic Genomics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#My-understanding"><span class="nav-number">1.7.</span> <span class="nav-text">My understanding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Quality-Control"><span class="nav-number">1.8.</span> <span class="nav-text">Quality Control</span></a></li></ol></li></ol></div>
             
 
           </div>
