@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="Something useful for shell scripts/gawk scripts/git commands/aws commandscreate public ssh key12$ ssh-keygen -t rsa -C &amp;quot;siwei&amp;quot;$ cat ~/.ssh/id_rsa.pub connect to the remote server and modify">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-04T23:11:56.565Z">
+<meta property="og:updated_time" content="2019-01-09T15:59:19.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cheatsheet Shell Scripts">
 <meta name="twitter:description" content="Something useful for shell scripts/gawk scripts/git commands/aws commandscreate public ssh key12$ ssh-keygen -t rsa -C &amp;quot;siwei&amp;quot;$ cat ~/.ssh/id_rsa.pub connect to the remote server and modify">
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="Created: 2019-01-04 15:04:51 / Modified: 17:11:56" itemprop="dateCreated datePublished" datetime="2019-01-04T15:04:51-06:00">2019-01-04</time>
+              <time title="Created: 2019-01-04 15:04:51" itemprop="dateCreated datePublished" datetime="2019-01-04T15:04:51-06:00">2019-01-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-09 09:59:19" itemprop="dateModified" datetime="2019-01-09T09:59:19-06:00">2019-01-09</time>
               
             
           </span>
@@ -474,7 +486,8 @@
 <h3 id="loop"><a href="#loop" class="headerlink" title="loop"></a>loop</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$for i in `seq 1 22`;do</span><br><span class="line">gawk -v chr=$&#123;i&#125; &apos;$5==&quot;SNP&quot; &#123;print chr&quot; &quot;$2&#125;&apos; &gt;&gt; file</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
 <h3 id="ifelse"><a href="#ifelse" class="headerlink" title="ifelse"></a>ifelse</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ if [&quot;answer&quot; == &quot;local&quot;]; then</span><br><span class="line">for i in `seq 1 22`;do</span><br><span class="line">echo &quot;hello world&quot; &gt;&gt; file1</span><br><span class="line">done</span><br><span class="line">else</span><br><span class="line">echo &quot;hello world&quot; &gt;&gt; file2</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 <h3 id="git-commands"><a href="#git-commands" class="headerlink" title="git commands"></a>git commands</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#one local repository to multiple remote repositories</span><br><span class="line">$ git remote add both repository1</span><br><span class="line">$ git remote remote set-url --add --push both repository1</span><br><span class="line">$ git remote set-url --add --push both repository2</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m first_commit</span><br><span class="line">$ git push both</span><br></pre></td></tr></table></figure>
-<h3 id="aws-commands"><a href="#aws-commands" class="headerlink" title="aws commands"></a>aws commands</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#to get started</span><br><span class="line">$ aws configure</span><br><span class="line">#list the contents in S3</span><br><span class="line">$ aws s3api list-buckets</span><br></pre></td></tr></table></figure>
+<h3 id="aws-commands"><a href="#aws-commands" class="headerlink" title="aws commands"></a>aws commands</h3><p>Reference: from AWS tutorial<br>Amazon S3 is a repository for internet data. It is designed to store and retrieve any amount of data from Amazon EC2. Amazon EC2 uses Amazon S3 for storing Amazon Machine Images(AMIs), users use AMI for launching EC2 instances. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#to get started</span><br><span class="line">$ aws configure</span><br><span class="line">#list the contents in S3</span><br><span class="line">$ aws s3api list-buckets</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -594,7 +607,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
