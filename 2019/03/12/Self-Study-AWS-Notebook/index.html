@@ -113,17 +113,17 @@
 
 
 
-  <meta name="description" content="Updating……StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores data in a hierarchy of files and foldersObject storage: stores data as objects which con">
+  <meta name="description" content="Updating……They are all modular things, a cheatsheet to save time when I cannot remember something StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Self-Study AWS Notebook">
 <meta property="og:url" content="http://yoursite.com/2019/03/12/Self-Study-AWS-Notebook/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="Updating……StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores data in a hierarchy of files and foldersObject storage: stores data as objects which con">
+<meta property="og:description" content="Updating……They are all modular things, a cheatsheet to save time when I cannot remember something StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-13T22:16:39.284Z">
+<meta property="og:updated_time" content="2019-03-14T17:30:03.652Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Self-Study AWS Notebook">
-<meta name="twitter:description" content="Updating……StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores data in a hierarchy of files and foldersObject storage: stores data as objects which con">
+<meta name="twitter:description" content="Updating……They are all modular things, a cheatsheet to save time when I cannot remember something StorageAWS S3Block storage: stores data organized as an array of unrelated blocksFile storage: stores">
 
 
 
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-13 17:16:39" itemprop="dateModified" datetime="2019-03-13T17:16:39-05:00">2019-03-13</time>
+                <time title="Modified: 2019-03-14 12:30:03" itemprop="dateModified" datetime="2019-03-14T12:30:03-05:00">2019-03-14</time>
               
             
           </span>
@@ -477,12 +477,15 @@
       
 
       
-        <h3 id="Updating……"><a href="#Updating……" class="headerlink" title="Updating……"></a>Updating……</h3><h2 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h2><h3 id="AWS-S3"><a href="#AWS-S3" class="headerlink" title="AWS S3"></a>AWS S3</h3><p>Block storage: stores data organized as an array of unrelated blocks<br>File storage: stores data in a hierarchy of files and folders<br>Object storage: stores data as objects which consist of data, metadata and identifier</p>
+        <h3 id="Updating……"><a href="#Updating……" class="headerlink" title="Updating……"></a>Updating……</h3><p>They are all modular things, a cheatsheet to save time when I cannot remember something</p>
+<h2 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h2><h3 id="AWS-S3"><a href="#AWS-S3" class="headerlink" title="AWS S3"></a>AWS S3</h3><p>Block storage: stores data organized as an array of unrelated blocks<br>File storage: stores data in a hierarchy of files and folders<br>Object storage: stores data as objects which consist of data, metadata and identifier</p>
 <p>Buckets: Create a bucket and store data/Pay only what you use/Region based<br>Objects: Objects stored in buckets(image, word…) Object metadta=Name | Value<br>Object storage classes: S3 standard; S3 intelligent-tiering; S3 standard-IA; S3 One Zone-IA; S3 Glacier</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#insert your AWS access key ID and secret access key</span><br><span class="line">D:\&gt; aws configure</span><br><span class="line">D:\&gt; aws s3api list-buckets</span><br><span class="line">D:\&gt; aws s3 ls s3://</span><br><span class="line">D:\&gt; aws s3api head-object --bucket bucketname --key objectname</span><br></pre></td></tr></table></figure>
+<p>S3 access permission: how to add permission of another account? <a href="https://docs.aws.amazon.com/quicksight/latest/user/using-s3-files-in-another-aws-account.html" target="_blank" rel="noopener">https://docs.aws.amazon.com/quicksight/latest/user/using-s3-files-in-another-aws-account.html</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#Object</span><br><span class="line">#abort multipart upload</span><br><span class="line">s3:AbortMultipartUpload</span><br><span class="line">#delete object</span><br><span class="line">s3:DeleteObject</span><br><span class="line">#get object, head object, select object content</span><br><span class="line">s3:GetObject</span><br><span class="line"></span><br><span class="line">#Bucket</span><br><span class="line">#get public access block</span><br><span class="line">s3:GetAccountPublicAccessBlock</span><br><span class="line">#put public accessblock, delete public access block</span><br><span class="line">s3:PutAccountPublicAccessBlock</span><br></pre></td></tr></table></figure></p>
 <h2 id="Compute"><a href="#Compute" class="headerlink" title="Compute"></a>Compute</h2><h3 id="AWS-EC2"><a href="#AWS-EC2" class="headerlink" title="AWS EC2"></a>AWS EC2</h3><p>EC2 is the AWS to create and run virtual machines in the cloud, the VM is called “instances”. </p>
 <p>To use an SSH client to connect to an linux instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i /path/MyKeyPair.pem ec2-user@IP_address</span><br></pre></td></tr></table></figure></p>
 <p>Move data to and from S3 and EC2 instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ec2-user@IPaddress $ wget https://bucket.s3.amazonaws.com/path-to-file</span><br><span class="line">or</span><br><span class="line">ec2-user@IPaddress $ aws s3 cp s3://bucket/path-to-file filename</span><br><span class="line">or download an entire S3 bucket to a directory on the instance</span><br><span class="line">ec2-user@IPaddress $ aws s3 sync s3://bucket directory_on_instance</span><br></pre></td></tr></table></figure></p>
+<h2 id="Analytics"><a href="#Analytics" class="headerlink" title="Analytics"></a>Analytics</h2><h3 id="Amazon-QuickSight"><a href="#Amazon-QuickSight" class="headerlink" title="Amazon QuickSight"></a>Amazon QuickSight</h3><p>1) creating a data set using S3 files<br>2) creating a data set using Amazon Athena Data: <a href="https://docs.aws.amazon.com/quicksight/latest/user/create-a-data-set-athena.html" target="_blank" rel="noopener">https://docs.aws.amazon.com/quicksight/latest/user/create-a-data-set-athena.html</a></p>
 
       
     </div>
@@ -695,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Updating……"><span class="nav-number">1.</span> <span class="nav-text">Updating……</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Storage"><span class="nav-number"></span> <span class="nav-text">Storage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-S3"><span class="nav-number">1.</span> <span class="nav-text">AWS S3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compute"><span class="nav-number"></span> <span class="nav-text">Compute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-EC2"><span class="nav-number">1.</span> <span class="nav-text">AWS EC2</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Updating……"><span class="nav-number">1.</span> <span class="nav-text">Updating……</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Storage"><span class="nav-number"></span> <span class="nav-text">Storage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-S3"><span class="nav-number">1.</span> <span class="nav-text">AWS S3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Compute"><span class="nav-number"></span> <span class="nav-text">Compute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AWS-EC2"><span class="nav-number">1.</span> <span class="nav-text">AWS EC2</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Analytics"><span class="nav-number"></span> <span class="nav-text">Analytics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amazon-QuickSight"><span class="nav-number">1.</span> <span class="nav-text">Amazon QuickSight</span></a></li></ol></li></div>
             
 
           </div>
