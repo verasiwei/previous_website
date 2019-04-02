@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="I have a bad memory that sometimes I really need a cheatsheet ~_~ PostgreSQL FundamentalSELECT1) select all columnsSELECT * FROM table; 2) select some columnsSELECT column1,column2,… FROM table; 3) se">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-01T21:16:28.827Z">
+<meta property="og:updated_time" content="2019-04-01T22:01:46.083Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Self-Study-SQL-Notebook">
 <meta name="twitter:description" content="I have a bad memory that sometimes I really need a cheatsheet ~_~ PostgreSQL FundamentalSELECT1) select all columnsSELECT * FROM table; 2) select some columnsSELECT column1,column2,… FROM table; 3) se">
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-01 16:16:28" itemprop="dateModified" datetime="2019-04-01T16:16:28-05:00">2019-04-01</time>
+                <time title="Modified: 2019-04-01 17:01:46" itemprop="dateModified" datetime="2019-04-01T17:01:46-05:00">2019-04-01</time>
               
             
           </span>
@@ -498,8 +498,7 @@
 <p>2)<br>SELECT column_1, COUNT(*) FROM table_name<br>GROUP BY column_1;</p>
 <p>3)<br>SELECT column_1, COUNT(column_1), SUM(column_1)<br>FROM table_name<br>GROUP BY column_1;</p>
 <h3 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h3><p>1) The condition applies to the group rows created by the GROUP BY, but WHERE applies before GROUP BY<br>SELECT column_1, aggregate_function(column_2)<br>FROM table_name<br>WHERE column_1 IN (“”,””,””)<br>GROUP BY column_1<br>HAVING condition;</p>
-<p>2)</p>
-
+<h2 id="JOINS"><a href="#JOINS" class="headerlink" title="JOINS"></a>JOINS</h2>
       
     </div>
 
@@ -711,7 +710,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PostgreSQL-Fundamental"><span class="nav-number">1.</span> <span class="nav-text">PostgreSQL Fundamental</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SELECT"><span class="nav-number">1.1.</span> <span class="nav-text">SELECT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT"><span class="nav-number">1.2.</span> <span class="nav-text">COUNT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIMIT"><span class="nav-number">1.3.</span> <span class="nav-text">LIMIT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ORDER-BY"><span class="nav-number">1.4.</span> <span class="nav-text">ORDER BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BETWEEN"><span class="nav-number">1.5.</span> <span class="nav-text">BETWEEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IN"><span class="nav-number">1.6.</span> <span class="nav-text">IN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIKE"><span class="nav-number">1.7.</span> <span class="nav-text">LIKE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-BY-Statements"><span class="nav-number">2.</span> <span class="nav-text">GROUP BY Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MIN-MAX-AVG-SUM"><span class="nav-number">2.1.</span> <span class="nav-text">MIN, MAX, AVG, SUM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">2.2.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HAVING"><span class="nav-number">2.3.</span> <span class="nav-text">HAVING</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PostgreSQL-Fundamental"><span class="nav-number">1.</span> <span class="nav-text">PostgreSQL Fundamental</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SELECT"><span class="nav-number">1.1.</span> <span class="nav-text">SELECT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#COUNT"><span class="nav-number">1.2.</span> <span class="nav-text">COUNT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIMIT"><span class="nav-number">1.3.</span> <span class="nav-text">LIMIT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ORDER-BY"><span class="nav-number">1.4.</span> <span class="nav-text">ORDER BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BETWEEN"><span class="nav-number">1.5.</span> <span class="nav-text">BETWEEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IN"><span class="nav-number">1.6.</span> <span class="nav-text">IN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LIKE"><span class="nav-number">1.7.</span> <span class="nav-text">LIKE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GROUP-BY-Statements"><span class="nav-number">2.</span> <span class="nav-text">GROUP BY Statements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MIN-MAX-AVG-SUM"><span class="nav-number">2.1.</span> <span class="nav-text">MIN, MAX, AVG, SUM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GROUP-BY"><span class="nav-number">2.2.</span> <span class="nav-text">GROUP BY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HAVING"><span class="nav-number">2.3.</span> <span class="nav-text">HAVING</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JOINS"><span class="nav-number">3.</span> <span class="nav-text">JOINS</span></a></li></ol></div>
             
 
           </div>
