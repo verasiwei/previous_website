@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$d">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-13T23:51:11.967Z">
+<meta property="og:updated_time" content="2019-06-14T00:02:12.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algebra Basic">
 <meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$d">
@@ -380,7 +380,7 @@
                 
               
 
-              <time title="Created: 2019-06-13 10:40:42 / Modified: 18:51:11" itemprop="dateCreated datePublished" datetime="2019-06-13T10:40:42-05:00">2019-06-13</time>
+              <time title="Created: 2019-06-13 10:40:42 / Modified: 19:02:12" itemprop="dateCreated datePublished" datetime="2019-06-13T10:40:42-05:00">2019-06-13</time>
             
 
             
@@ -472,21 +472,21 @@
 <h2 id="1-Basic"><a href="#1-Basic" class="headerlink" title="1. Basic"></a>1. Basic</h2><ul>
 <li><p>Determinant<br>A scalar value that can be computed from elements of a square matrix.<br>$$det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}a_{i,j}M_{i,j}$$<br>where aij is the element of A and Mij is minor.</p>
 </li>
-<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant $|M| \neq 0$.<br>$$A^{-1}A=I$$</p>
+<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant \(|M| \neq 0\).<br>$$A^{-1}A=I$$</p>
 </li>
-<li><p>Matrix multiplication<br>$A \in R^{mn}$ and $B \in R^{np}$<br>$$C=AB=\sum_{k=1}^{n}A_{ik}B_{kj}$$</p>
+<li><p>Matrix multiplication<br>\(A \in R^{mn}\)<br>\(B \in R^{np}\)<br>$$C=AB=\sum_{k=1}^{n}A_{ik}B_{kj}$$</p>
 </li>
 <li><p>Matrix transpose<br>$$(A^{T})^T=A$$<br>$$(AB)^{T}=B^{T}A^{T}$$<br>$$(A+B)^{T}=A^{T}+B^{T}$$</p>
 </li>
 <li><p>Trace<br>updating</p>
 </li>
-<li><p>Eigenvalue and Eigenvectors<br>Given a square matrix A, $\lambda$ is an eigenvalue and x is the corresponding eigenvector if<br>$$Ax=\lambda x$$<br>which equals to $$(\lambda I-A)x=0$$<br>properties of eigenvalue and eigenvectors, updating</p>
+<li><p>Eigenvalue and Eigenvectors<br>Given a square matrix A, \(\lambda\) is an eigenvalue and x is the corresponding eigenvector if<br>$$Ax=\lambda x$$<br>which equals to $$(\lambda I-A)x=0$$<br>properties of eigenvalue and eigenvectors, updating</p>
 </li>
 </ul>
 <h2 id="2-Other-definitions-and-calculations"><a href="#2-Other-definitions-and-calculations" class="headerlink" title="2.Other definitions and calculations"></a>2.Other definitions and calculations</h2><ul>
-<li>Laplace Matrix (simple graph)<br>Given a simple graph G with n vertices, its Laplace Matrix $L_{nn}$ is defined as: L=D-A, where D is the degree matrix and A is the adjacency matrix. D is a diagonal matrix which includes the information about the degree of each vertex. A is the adjacency matrix which only includes 1 and 0 since G is a simple graph and the diagonal are all 0. The element of L are given by<br>$$L_{nn}=\begin{cases} deg(v_{i}), &amp;if i=j\-1, &amp;ifi!=j and i is adjacent to j\0, &amp;otherwise\end{case}$$</li>
+<li>Laplace Matrix (simple graph)<br>Given a simple graph G with n vertices, its Laplace Matrix \(L_{nn}\) is defined as: L=D-A, where D is the degree matrix and A is the adjacency matrix. D is a diagonal matrix which includes the information about the degree of each vertex. A is the adjacency matrix which only includes 1 and 0 since G is a simple graph and the diagonal are all 0. The element of L are given by</li>
 </ul>
-<p>symmetrix normalized laplacian<br>L^{sym}=$D^{-1/2}LD^{-1/2}=I-D^{-1/2}AD^{-1/2}$</p>
+<p>symmetrix normalized laplacian<br>L^{sym}=\(D^{-1/2}LD^{-1/2}=I-D^{-1/2}AD^{-1/2}\)</p>
 <ul>
 <li>Singular value decomposition</li>
 </ul>
