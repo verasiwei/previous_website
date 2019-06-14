@@ -14,7 +14,7 @@
 
 <html class="theme-next pisces" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -113,17 +113,17 @@
 
 
 
-  <meta name="description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$d">
+  <meta name="description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algebra Basic">
 <meta property="og:url" content="http://yoursite.com/2019/06/13/Algebra_Basic/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$d">
+<meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-14T00:02:12.025Z">
+<meta property="og:updated_time" content="2019-06-14T02:50:07.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algebra Basic">
-<meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$d">
+<meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
 
 
 
@@ -178,7 +178,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 </head>
@@ -190,7 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -380,7 +380,7 @@
                 
               
 
-              <time title="Created: 2019-06-13 10:40:42 / Modified: 19:02:12" itemprop="dateCreated datePublished" datetime="2019-06-13T10:40:42-05:00">2019-06-13</time>
+              <time title="Created: 2019-06-13 10:40:42 / Modified: 21:50:07" itemprop="dateCreated datePublished" datetime="2019-06-13T10:40:42-05:00">2019-06-13</time>
             
 
             
@@ -465,14 +465,11 @@
       
 
       
-        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-
-<p>This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study. </p>
+        <p>This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study. </p>
 <h2 id="1-Basic"><a href="#1-Basic" class="headerlink" title="1. Basic"></a>1. Basic</h2><ul>
 <li><p>Determinant<br>A scalar value that can be computed from elements of a square matrix.<br>$$det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}a_{i,j}M_{i,j}$$<br>where aij is the element of A and Mij is minor.</p>
 </li>
-<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant \(|M| \neq 0\).<br>$$A^{-1}A=I$$</p>
+<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant $|M| \neq 0$.<br>$$A^{-1}A=I$$</p>
 </li>
 <li><p>Matrix multiplication<br>\(A \in R^{mn}\)<br>\(B \in R^{np}\)<br>$$C=AB=\sum_{k=1}^{n}A_{ik}B_{kj}$$</p>
 </li>
@@ -1308,6 +1305,37 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    
+  
+
 
   
   
