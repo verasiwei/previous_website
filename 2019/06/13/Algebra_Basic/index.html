@@ -113,17 +113,17 @@
 
 
 
-  <meta name="description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
+  <meta name="description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.  det(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Algebra Basic">
 <meta property="og:url" content="http://yoursite.com/2019/06/13/Algebra_Basic/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
+<meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.  det(">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-06-14T02:50:07.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algebra Basic">
-<meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.$$det(">
+<meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. Basic DeterminantA scalar value that can be computed from elements of a square matrix.  det(">
 
 
 
@@ -467,17 +467,19 @@
       
         <p>This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study. </p>
 <h2 id="1-Basic"><a href="#1-Basic" class="headerlink" title="1. Basic"></a>1. Basic</h2><ul>
-<li><p>Determinant<br>A scalar value that can be computed from elements of a square matrix.<br>$$det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}a_{i,j}M_{i,j}$$<br>where aij is the element of A and Mij is minor.</p>
+<li><p>Determinant<br>A scalar value that can be computed from elements of a square matrix. </p>
+<script type="math/tex; mode=display">det(A)=|A|=\sum_{j=1}^{n}(-1)^{i+j}a_{i,j}M_{i,j}</script><p>where aij is the element of A and Mij is minor.</p>
 </li>
-<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant $|M| \neq 0$.<br>$$A^{-1}A=I$$</p>
-</li>
-<li><p>Matrix multiplication<br>\(A \in R^{mn}\)<br>\(B \in R^{np}\)<br>$$C=AB=\sum_{k=1}^{n}A_{ik}B_{kj}$$</p>
-</li>
-<li><p>Matrix transpose<br>$$(A^{T})^T=A$$<br>$$(AB)^{T}=B^{T}A^{T}$$<br>$$(A+B)^{T}=A^{T}+B^{T}$$</p>
-</li>
+<li><p>Matrix Inverse<br>A square matrix M has an inverse that M is invertible if the determinant $|M| \neq 0$. </p>
+<script type="math/tex; mode=display">A^{-1}A=I</script></li>
+<li><p>Matrix multiplication<br>\(A \in R^{mn}\)<br>\(B \in R^{np}\) </p>
+<script type="math/tex; mode=display">C=AB=\sum_{k=1}^{n}A_{ik}B_{kj}</script></li>
+<li><p>Matrix transpose</p>
+<script type="math/tex; mode=display">(A^{T})^T=A</script><script type="math/tex; mode=display">(AB)^{T}=B^{T}A^{T}</script><script type="math/tex; mode=display">(A+B)^{T}=A^{T}+B^{T}</script></li>
 <li><p>Trace<br>updating</p>
 </li>
-<li><p>Eigenvalue and Eigenvectors<br>Given a square matrix A, \(\lambda\) is an eigenvalue and x is the corresponding eigenvector if<br>$$Ax=\lambda x$$<br>which equals to $$(\lambda I-A)x=0$$<br>properties of eigenvalue and eigenvectors, updating</p>
+<li><p>Eigenvalue and Eigenvectors<br>Given a square matrix A, \(\lambda\) is an eigenvalue and x is the corresponding eigenvector if</p>
+<script type="math/tex; mode=display">Ax=\lambda x</script><p>which equals to <script type="math/tex">(\lambda I-A)x=0</script><br>properties of eigenvalue and eigenvectors, updating</p>
 </li>
 </ul>
 <h2 id="2-Other-definitions-and-calculations"><a href="#2-Other-definitions-and-calculations" class="headerlink" title="2.Other definitions and calculations"></a>2.Other definitions and calculations</h2><ul>
@@ -1331,7 +1333,24 @@
         }
     });
 </script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
     
   
