@@ -12,7 +12,7 @@
 
 
 
-<html class="theme-next pisces" lang="en">
+<html class="theme-next mist" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,7 +89,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     version: '6.4.2',
     sidebar: {"position":"left","width":320,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="Assuming there is a continuous outcome measure y, and the interest is to examine the relationship between y and a continuous variable called $x_{1}$ that the model is something like this $y~\beta_{0}+">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-16T20:24:37.268Z">
+<meta property="og:updated_time" content="2019-06-17T02:38:30.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mixed Effect Model">
 <meta name="twitter:description" content="Assuming there is a continuous outcome measure y, and the interest is to examine the relationship between y and a continuous variable called $x_{1}$ that the model is something like this $y~\beta_{0}+">
@@ -274,6 +274,9 @@
   
 
   
+    
+
+  
 
   
     <div class="site-search">
@@ -314,9 +317,6 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-            
-
           
           <div id="content" class="content">
             
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-16 15:24:37" itemprop="dateModified" datetime="2019-06-16T15:24:37-05:00">2019-06-16</time>
+                <time title="Modified: 2019-06-16 21:38:30" itemprop="dateModified" datetime="2019-06-16T21:38:30-05:00">2019-06-16</time>
               
             
           </span>
@@ -477,7 +477,7 @@
       
 
       
-        <p>Assuming there is a continuous outcome measure y, and the interest is to examine the relationship between y and a continuous variable called $x_{1}$ that the model is something like this $y~\beta_{0}+\beta_{1}x_{1}+\epsilon$. And assuming we also have age and sex fixed effects in the model, so the model is like this $y~\beta_{0}+\beta_{1}x_{1}+\beta_{2}age+\beta_{3}sex+\epsilon$. But the situation is that for each subject, we took multiple measures at different timepoints that each subject have multiple responses at different timepoints, so multiple responses from the same subject are not independent. We need to add random effect in the regression model to deal with this situation. Each subject might have different “baseline” y value that subject 1 might have a mean y value1 and subject 2 might have a mean y value2 across three timepoints. Therefore we need to include subjects as one random effect. $y~\beta_{0}+\beta_{1}x_{1}+\beta_{2}age+\beta_{3}sex+\gamma_{1}subject+\epsilon$</p>
+        <p>Assuming there is a continuous outcome measure y, and the interest is to examine the relationship between y and a continuous variable called $x_{1}$ that the model is something like this $y~\beta_{0}+\beta_{1}x_{1}+\epsilon$. And assuming we also have age and sex fixed effects in the model, so the model is like this $y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}age+\beta_{3}sex+\epsilon$. But the situation is that for each subject, we took multiple measures at different timepoints that each subject have multiple responses at different timepoints, so multiple responses from the same subject are not independent. We need to add random effect in the regression model to deal with this situation. Each subject might have different “baseline” y value that subject 1 might have a mean y value1 and subject 2 might have a mean y value2 across three timepoints. Therefore we need to include subjects as one random effect. $y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}age+\beta_{3}sex+\gamma_{1}subject+\epsilon$</p>
 
       
     </div>
@@ -822,13 +822,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
