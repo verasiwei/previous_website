@@ -120,7 +120,7 @@
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. BasicDeterminantA scalar value that can be computed from elements of a square matrix.  det(A">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-16T20:13:26.063Z">
+<meta property="og:updated_time" content="2019-06-17T02:35:39.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algebra Basic">
 <meta name="twitter:description" content="This is the review and cheatsheet of some basic linear algebra knowledge during my undergraduate study.  1. BasicDeterminantA scalar value that can be computed from elements of a square matrix.  det(A">
@@ -397,7 +397,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-16 15:13:26" itemprop="dateModified" datetime="2019-06-16T15:13:26-05:00">2019-06-16</time>
+                <time title="Modified: 2019-06-16 21:35:39" itemprop="dateModified" datetime="2019-06-16T21:35:39-05:00">2019-06-16</time>
               
             
           </span>
@@ -501,7 +501,9 @@
 \right]</script><h2 id="2-Other-definitions-and-calculations"><a href="#2-Other-definitions-and-calculations" class="headerlink" title="2.Other definitions and calculations"></a>2.Other definitions and calculations</h2><p><strong>Laplace Matrix (simple graph)</strong><br>Given a simple graph G with n vertices, its Laplace Matrix \(L_{nn}\) is defined as: L=D-A, where D is the degree matrix and A is the adjacency matrix. D is a diagonal matrix which includes the information about the degree of each vertex. A is the adjacency matrix which only includes 1 and 0 since G is a simple graph and the diagonal are all 0.<br><strong>symmetrix normalized laplacian</strong></p>
 <script type="math/tex; mode=display">L^{sym}=D^{-1/2}LD^{-1/2}=I-D^{-1/2}AD^{-1/2}</script><p><strong>Singular value decomposition</strong><br>Assume $A \in R^{mn}$ and all elements in M belongs to real or plural values. There exists a decomposition that </p>
 <script type="math/tex; mode=display">A=U \sum V^{T}</script><p>where U and V are orthogonal that $U^{T}U=I_{mm}$ and $V^{T}V=I_{nn}$.</p>
-<script type="math/tex; mode=display">A^{T}A=V (\sum)^{T} \sum V^{T}</script><script type="math/tex; mode=display">AA^{T}=U \sum (\sum)^{T} U^{T}</script>
+<script type="math/tex; mode=display">A^{T}A=V (\sum)^{T} \sum V^{T}</script><script type="math/tex; mode=display">AA^{T}=U \sum (\sum)^{T} U^{T}</script><p><strong>Eigen decomposition</strong><br>$A \in R^{nn}$ is a square matrix with n linear independent eigenvectors $q_{i}$(i=1…n). A can be factorized as </p>
+<script type="math/tex; mode=display">A=Q\Lambda Q^{-1}</script><p>where Q is the square n by n matrix with ith column is the eigenvector of A, and $\Lambda$ is the diagonal matrix with diagonal elements are the corresponding eigenvalues. </p>
+
       
     </div>
 
@@ -537,6 +539,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/16/Classification/" rel="prev" title="Classification">
+                Classification <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -620,7 +626,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
