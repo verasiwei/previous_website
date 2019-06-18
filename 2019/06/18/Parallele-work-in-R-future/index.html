@@ -114,17 +114,17 @@
 
 
 
-  <meta name="description" content="futureFor most of my work, I need parallel work on the big data. The difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can us">
+  <meta name="description" content="futurefutureThe difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can use a sequential strategy, which means it will run in t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Parallel work in R series 1: future">
+<meta property="og:title" content="Parallel work in R">
 <meta property="og:url" content="http://verasiwei.github.io/2019/06/18/Parallele-work-in-R-future/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="futureFor most of my work, I need parallel work on the big data. The difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can us">
+<meta property="og:description" content="futurefutureThe difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can use a sequential strategy, which means it will run in t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-18T17:35:56.061Z">
+<meta property="og:updated_time" content="2019-06-18T22:55:06.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Parallel work in R series 1: future">
-<meta name="twitter:description" content="futureFor most of my work, I need parallel work on the big data. The difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can us">
+<meta name="twitter:title" content="Parallel work in R">
+<meta name="twitter:description" content="futurefutureThe difficiency of R is that R has less API. But future is a good implementation of doing parallel computing in R.Future package can use a sequential strategy, which means it will run in t">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>Parallel work in R series 1: future | Siwei Zhang</title>
+  <title>Parallel work in R | Siwei Zhang</title>
   
 
 
@@ -354,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Parallel work in R series 1: future
+          <h1 class="post-title" itemprop="name headline">Parallel work in R
               
             
           </h1>
@@ -379,7 +379,7 @@
                 
               
 
-              <time title="Created: 2019-06-18 10:01:33 / Modified: 12:35:56" itemprop="dateCreated datePublished" datetime="2019-06-18T10:01:33-05:00">2019-06-18</time>
+              <time title="Created: 2019-06-18 10:01:33 / Modified: 17:55:06" itemprop="dateCreated datePublished" datetime="2019-06-18T10:01:33-05:00">2019-06-18</time>
             
 
             
@@ -426,7 +426,7 @@
 
           
           
-             <span id="/2019/06/18/Parallele-work-in-R-future/" class="leancloud_visitors" data-flag-title="Parallel work in R series 1: future">
+             <span id="/2019/06/18/Parallele-work-in-R-future/" class="leancloud_visitors" data-flag-title="Parallel work in R">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -464,13 +464,14 @@
       
 
       
-        <h2 id="future"><a href="#future" class="headerlink" title="future"></a>future</h2><p>For most of my work, I need parallel work on the big data. The difficiency of R is that R has less API. But <em>future</em> is a good implementation of doing parallel computing in R.<br><em>Future</em> package can use a sequential strategy, which means it will run in the current R sessions. Other strategies can be used to run parallely on the current machine or on a cluster. During parallel working, the current R session does not block, and the <em>future</em> are being resolved in separate processes running in the background. The source of <em>future</em> is here: <a href="https://github.com/HenrikBengtsson/future/tree/master" target="_blank" rel="noopener">https://github.com/HenrikBengtsson/future/tree/master</a>. The future package implements these types of work:</p>
+        <h1 id="future"><a href="#future" class="headerlink" title="future"></a>future</h1><h2 id="future-1"><a href="#future-1" class="headerlink" title="future"></a>future</h2><p>The difficiency of R is that R has less API. But <em>future</em> is a good implementation of doing parallel computing in R.<br><em>Future</em> package can use a sequential strategy, which means it will run in the current R sessions. Other strategies can be used to run parallely on the current machine or on a cluster. During parallel working, the current R session does not block, and the <em>future</em> are being resolved in separate processes running in the background. The source of <em>future</em> is here: <a href="https://github.com/HenrikBengtsson/future/tree/master" target="_blank" rel="noopener">https://github.com/HenrikBengtsson/future/tree/master</a>. The future package implements these types of work:</p>
 <p><strong>1.sequential</strong>: sequentially and run in the current R session<br><strong>2.multisession</strong>: multiple background R sessions on current machine. The package will launch a set of R sessions in the background. If all background sessions are busy serving other futures, the creation of the next multisession future is blocked until a backgoround session becomes available again. The total number of background processes is decided by the number of available cores on your machine.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">availableCores()</span><br><span class="line">plan(multisession)</span><br></pre></td></tr></table></figure></p>
 <p><strong>3.multicore</strong>: forking processes. Faster than multisession but unstable. For instance, when running R from within Rstudio process forking may resulting in crashed R sessions. The future package disables multicore by default. This will cause <code>plan(multicore)</code> to <code>plan(sequential)</code> and <code>plan(multiprocess)</code> to <code>plan(multisession)</code>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#default FALSE</span><br><span class="line">supportsMulticore()</span><br><span class="line">plan(multicore)</span><br></pre></td></tr></table></figure></p>
 <p><strong>4.multiprocess</strong>: multicore if supported otherwise multisession. Multisession will be used unless multicore evaluation is supported.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">availableCores()</span><br><span class="line">plan(multiprocess)</span><br></pre></td></tr></table></figure></p>
 <p><em>Global</em> objects have to be passed exactly as they were at the time the future was created.</p>
 <h2 id="future-apply"><a href="#future-apply" class="headerlink" title="future.apply"></a>future.apply</h2><p><em>future.apply</em> is to parallelize the apply family<br>I will implement asynchronous futures:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">library(future)</span><br><span class="line">#firstly check how many cores in your machine</span><br><span class="line">availableCores()</span><br><span class="line"></span><br><span class="line">#this will actually run multisession using up to 20 parallel futures, also 20 cores.</span><br><span class="line">plan(multiprocess,workers=20)</span><br><span class="line">resuls &lt;- future.apply::future_lapply(1:10,function(x) createfunction(x))</span><br></pre></td></tr></table></figure></p>
-
+<h1 id="foreach-and-doParallel"><a href="#foreach-and-doParallel" class="headerlink" title="foreach and doParallel"></a>foreach and doParallel</h1><p>How about another option of using foreach and doParallel packages? Inside the doParallel package, <strong>Pay attention to</strong> there are two types of parallel working, one is <em>multicore</em> functionality which runs tasks on a single computer, not a cluster of computers, and another is <em>snow</em> functionality. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">library(doParallel)</span><br><span class="line">library(foreach)</span><br><span class="line"></span><br><span class="line">#multicore functionality</span><br><span class="line">registerDoParallel(cores=20)</span><br><span class="line">getDoParWorkers()</span><br><span class="line">getDoParName()</span><br><span class="line"></span><br><span class="line">#%do% is to run sequentially and %dopar% is to run parallely</span><br><span class="line">result &lt;- foreach(i=1:10) %dopar% &#123;lapply(list,function)&#125;</span><br><span class="line"></span><br><span class="line">#snow functionality</span><br><span class="line">mycluster &lt;- makeCluster(5)</span><br><span class="line">registerDoParallel(mycluster,cores=5)</span><br><span class="line">getDoParWorkers()</span><br><span class="line">result &lt;- foreach(i=1:10) %dopar% &#123;lapply(list,function)&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -682,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#future"><span class="nav-number">1.</span> <span class="nav-text">future</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#future-apply"><span class="nav-number">2.</span> <span class="nav-text">future.apply</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#future"><span class="nav-number">1.</span> <span class="nav-text">future</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#future-1"><span class="nav-number">1.1.</span> <span class="nav-text">future</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#future-apply"><span class="nav-number">1.2.</span> <span class="nav-text">future.apply</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#foreach-and-doParallel"><span class="nav-number">2.</span> <span class="nav-text">foreach and doParallel</span></a></li></ol></div>
             
 
           </div>
@@ -860,7 +861,7 @@
       var disqus_config = function () {
         this.page.url = 'http://verasiwei.github.io/2019/06/18/Parallele-work-in-R-future/';
         this.page.identifier = '2019/06/18/Parallele-work-in-R-future/';
-        this.page.title = 'Parallel work in R series 1: future';
+        this.page.title = 'Parallel work in R';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
