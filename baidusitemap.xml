@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://verasiwei.github.io/2019/03/12/Self-Study-AWS-Notebook/</loc>
+    <lastmod>2019-08-02</lastmod>
+  </url>  <url>
     <loc>http://verasiwei.github.io/2019/07/10/Logic-Regression/</loc>
     <lastmod>2019-07-14</lastmod>
   </url>  <url>
@@ -30,9 +33,6 @@
   </url>  <url>
     <loc>http://verasiwei.github.io/2019/03/27/Self-Study-SQL-Notebook/</loc>
     <lastmod>2019-04-07</lastmod>
-  </url>  <url>
-    <loc>http://verasiwei.github.io/2019/03/12/Self-Study-AWS-Notebook/</loc>
-    <lastmod>2019-03-14</lastmod>
   </url>  <url>
     <loc>http://verasiwei.github.io/2019/03/06/Rent%20Apartment%20in%20Nashville/</loc>
     <lastmod>2019-03-06</lastmod>
