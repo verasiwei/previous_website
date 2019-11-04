@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://verasiwei.github.io/about/index.html</loc>
+    
+    <lastmod>2019-11-04T03:42:31.306Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://verasiwei.github.io/2019/03/12/Self-Study-AWS-Notebook/</loc>
     
     <lastmod>2019-08-02T22:10:32.326Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://verasiwei.github.io/2019/06/23/Bayesian-machine-learning-A-B-Testing/</loc>
     
     <lastmod>2019-06-27T20:24:41.947Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://verasiwei.github.io/about/index.html</loc>
-    
-    <lastmod>2019-06-27T16:34:25.188Z</lastmod>
     
   </url>
   
