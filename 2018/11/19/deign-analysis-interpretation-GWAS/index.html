@@ -12,13 +12,12 @@
 
 
 
-<html class="theme-next muse" lang="en">
+<html class="theme-next pisces" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="google-site-verification" content="FN8ztVc6A3egTaU-4pB3d6QxyNgrBB8NgxAZYwZ_O8Q">
 
 
 
@@ -90,9 +89,9 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '6.4.2',
-    sidebar: {"width":320,"display":"post","scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","width":320,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -117,24 +116,25 @@
   <meta name="description" content="Notes for the book: Design, Analysis, and Interpretation of Genome-Wide Association Scans Introduction:Charles Darwin’s workLed most directly to the field of genetics, which is the theory of evolution">
 <meta property="og:type" content="article">
 <meta property="og:title" content="deign_analysis_interpretation_GWAS">
-<meta property="og:url" content="http://verasiwei.github.io/2018/11/19/deign-analysis-interpretation-GWAS/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/11/19/deign-analysis-interpretation-GWAS/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
 <meta property="og:description" content="Notes for the book: Design, Analysis, and Interpretation of Genome-Wide Association Scans Introduction:Charles Darwin’s workLed most directly to the field of genetics, which is the theory of evolution">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://verasiwei.github.io/images/chr1.jpg">
-<meta property="og:image" content="http://verasiwei.github.io/images/strand.jpg">
-<meta property="og:updated_time" content="2019-06-16T20:26:43.129Z">
+<meta property="og:image" content="http://yoursite.com/images/chr1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/strand.jpg">
+<meta property="og:image" content="http://yoursite.com/images/allele_snp.jpg">
+<meta property="og:updated_time" content="2018-11-21T17:48:07.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="deign_analysis_interpretation_GWAS">
 <meta name="twitter:description" content="Notes for the book: Design, Analysis, and Interpretation of Genome-Wide Association Scans Introduction:Charles Darwin’s workLed most directly to the field of genetics, which is the theory of evolution">
-<meta name="twitter:image" content="http://verasiwei.github.io/images/chr1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/images/chr1.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://verasiwei.github.io/2018/11/19/deign-analysis-interpretation-GWAS/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/19/deign-analysis-interpretation-GWAS/">
 
 
 
@@ -182,7 +182,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 
 </head>
@@ -191,8 +191,10 @@
 
   
   
+    
+  
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container  page-post-detail">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -276,9 +278,6 @@
   
 
   
-    
-
-  
 
   
     <div class="site-search">
@@ -320,6 +319,9 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+            
+
+          
           <div id="content" class="content">
             
 
@@ -339,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://verasiwei.github.io/2018/11/19/deign-analysis-interpretation-GWAS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/19/deign-analysis-interpretation-GWAS/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -399,7 +401,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-16 15:26:43" itemprop="dateModified" datetime="2019-06-16T15:26:43-05:00">2019-06-16</time>
+                <time title="Modified: 2018-11-21 11:48:07" itemprop="dateModified" datetime="2018-11-21T11:48:07-06:00">2018-11-21</time>
               
             
           </span>
@@ -489,6 +491,7 @@
 <h3 id="Types-of-Genetic-Variation"><a href="#Types-of-Genetic-Variation" class="headerlink" title="Types of Genetic Variation"></a>Types of Genetic Variation</h3><p>1) An SNV consists of a single base variation at a specific position on a given strand of DNA with the change measured relative to some existing consensus sequence. If an SNV presents at least 1%, it will be denoted as SNP.<br>2) Insertions/Deletions<br>3) Larger Structured Variants: including deletions, insertions, and duplications of segments of DNA that are 1kb or greater in extent are termed copy number variants or CNVs. Other types of structural variants include inversions and translocations.<br>4) Exonic Variation: Mendelian traits are most often due to protein changes in specific genes.<br>5) Non-exonic SNPs and Disease<br>6) SNP Haplotypes: a combination of from several to many SNPs on the same chromosome segment of DNA.</p>
 <h3 id="Basic-Genomics"><a href="#Basic-Genomics" class="headerlink" title="Basic Genomics:"></a>Basic Genomics:</h3><p>dbSNP: SNPs and other variants are reported.<br>UCSC Genome Browser: tools and datasets compiling sequence information for many genome. The blat tool maps sequences to genome location and strand is also available?<br>1000 Genomes Project website: Results of next generation sequencing of 1092 individuals from a variety of racial ethnic groups of similar diversity as HapMap phase 3. I use this datasets as a reference panel for imputation in GWAS study.</p>
 <h3 id="My-understanding"><a href="#My-understanding" class="headerlink" title="My understanding"></a>My understanding</h3><p>Human is diploid, 23 pairs of chromosomes, if both alleles of a human are the same, he is homozygous at that locus, otherwise it is heterozygous due to the existence of SNP. Assume on one loci of a chromosome, the base is T, normally if there is no polymorphism, it should also be T on the alleles because one from mother, one from father, if there is no SNP in the population, they should be same, but when there exists SNP, the genotype might be TC,TA,TG,CC,AA,GG.</p>
+<p><img src="/images/allele_snp.jpg" alt=""></p>
 <h3 id="Quality-Control"><a href="#Quality-Control" class="headerlink" title="Quality Control"></a>Quality Control</h3><ol>
 <li>Sample Level<br>From my own experience, it is very important to control the sample level, otherwise after you completing the whole GWAS, you will notice from the manhattan plot, some dots(variants) will suddenly jump to very abnormal level.<br>1) IBD(Identity by Descent):</li>
 </ol>
@@ -615,7 +618,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -728,7 +731,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright"> &copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -862,6 +865,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.2"></script>
+
+
+
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
@@ -884,7 +894,7 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://verasiwei.github.io/2018/11/19/deign-analysis-interpretation-GWAS/';
+        this.page.url = 'http://yoursite.com/2018/11/19/deign-analysis-interpretation-GWAS/';
         this.page.identifier = '2018/11/19/deign-analysis-interpretation-GWAS/';
         this.page.title = 'deign_analysis_interpretation_GWAS';
         };
@@ -1296,24 +1306,7 @@
           
         })
     });
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1324,13 +1317,6 @@
   
 
   
-  
-
-  
-  
-
-  
-
 
   
   
