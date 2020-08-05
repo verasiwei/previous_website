@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2020%2F08%2F03%2Fdocker%E5%AE%89%E8%A3%85graph-tool%2F</url>
+    <content type="text"><![CDATA[因为windows不能运行graph-tool库，所以了解了一下docker。我一开始的理解是类似于virtual machine, 但是了解了之后其实并不是这样，virtual machine 是指可以在一种操作系统里面运行另一种操作系统，但是virtual machine运行时会占用内存和硬盘，而且它是一个完整的系统，所以相对来说会感觉“臃肿”。 Linux开发了一种技术叫linux container，它不是一个完整的操作系统，在这个容器里面所有的进程都是虚拟的，而且它是底层系统的一个进程，这样速度就会快很多而且不会占用很多资源。 Docker的概念就是基于此，docker是linux container的一种封装， docker提供了一个接口， 把应用程序都放在一个image里，运行它就会生成一个container，程序就在这里面运行。 下面就是一个例子用docker安装graph-tool, 并且运行graph-tool。 install graph-tool using Docker 1&gt;docker pull tiagopeixoto/graph-tool run jupyter notebook inside the docker image 1234# /home/user is the virtual work directory&gt;docker run -p 8888:8888 -p 6006:6006 -it -u user -w /home/user tiagopeixoto/graph-tool bash$ jupyter notebook --ip 0.0.0.0 check the container ID 1&gt;docker ps If you closed the terminal but did not stop the container, you could enter it again. 1&gt;docker exec -it [container ID] bash you can also copy the files in docker container to local directory 1&gt;docker container cp [container ID]:[work directory] [local directory]]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Self-Study-Rcpp]]></title>
     <url>%2F2020%2F03%2F16%2FSelf-Study-Rcpp%2F</url>
     <content type="text"><![CDATA[Combine C++ code with R. 123456789101112131415#include &lt;Rcpp.h&gt;RcppExport SEXP convolve3cpp(SEXP a, SEXP b)&#123; Rcpp::NumericVector xa(a); Rcpp::NumericVector xb(b); int n_xa=xa.size(), n_xb=xb.size(); int nab=n_xa+n_xb-1; Rcpp::NumericVector xab(nab); for (int i=0; i &lt; n_xa;i++) for (int j=0; j &lt; n_xb; j++) xab[i+j] += xa[i] * xb[j]; return xab;&#125;]]></content>
