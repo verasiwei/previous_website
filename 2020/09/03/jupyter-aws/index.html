@@ -114,17 +114,17 @@
 
 
 
-  <meta name="description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com   Then to add the public key on your computer to authorized_key">
+  <meta name="description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="set up jupyter notebook on aws ec2">
 <meta property="og:url" content="http://verasiwei.github.io/2020/09/03/jupyter-aws/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com   Then to add the public key on your computer to authorized_key">
+<meta property="og:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-04T03:39:20.597Z">
+<meta property="og:updated_time" content="2020-09-04T03:43:20.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="set up jupyter notebook on aws ec2">
-<meta name="twitter:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com   Then to add the public key on your computer to authorized_key">
+<meta name="twitter:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
 
 
 
@@ -379,7 +379,7 @@
                 
               
 
-              <time title="Created: 2020-09-03 22:32:23 / Modified: 22:39:20" itemprop="dateCreated datePublished" datetime="2020-09-03T22:32:23-05:00">2020-09-03</time>
+              <time title="Created: 2020-09-03 22:32:23 / Modified: 22:43:20" itemprop="dateCreated datePublished" datetime="2020-09-03T22:32:23-05:00">2020-09-03</time>
             
 
             
@@ -464,18 +464,11 @@
       
 
       
-        <ol>
-<li>First generate ssh keypair between our own computer and server.<br>To find the IP address of EC2 instance<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://checkip.amazonaws.com</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <p>First generate ssh keypair between our own computer and server.<br>To find the IP address of EC2 instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://checkip.amazonaws.com</span><br></pre></td></tr></table></figure></p>
 <p>Then to add the public key on your computer to <code>authorized_keys</code> file under ~/.ssh folder. You may need permission or authorization to do this. Then you can use ssh client to connect to EC2 instance:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i key username@IP address</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then:</li>
-</ol>
+<p>Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda_you_downloaded_Linux.sh</span><br><span class="line">source .bashrc</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Then open jupyter notebook server</li>
-</ol>
+<p>Then open jupyter notebook server</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --no-browser --port=8888</span><br></pre></td></tr></table></figure>
 
       
