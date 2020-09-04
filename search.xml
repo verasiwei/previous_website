@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[set up jupyter notebook on aws ec2]]></title>
+    <url>%2F2020%2F09%2F03%2Fjupyter-aws%2F</url>
+    <content type="text"><![CDATA[First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys file under ~/.ssh folder. You may need permission or authorization to do this. Then you can use ssh client to connect to EC2 instance:1ssh -i key username@IP address Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then: 12bash Anaconda_you_downloaded_Linux.shsource .bashrc Then open jupyter notebook server 1jupyter notebook --no-browser --port=8888]]></content>
+      <categories>
+        <category>Programming</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Medicine_CHIP]]></title>
     <url>%2F2020%2F09%2F02%2FMedicine%2F</url>
     <content type="text"><![CDATA[Here are some notes for basic medicine knowledge that would help me understand the medicine problem itself. This page specific to CHIP (Clonal hematopoiesis of indeterminate potential). Clonal hematopoiesis refer to a population of related myeloid cells with an acquired gene mutation. It is a characteristic of myelodysplastic syndromes, but may also be found in some individuals who have no detectable hematologic malignancy, here it refers to clonal hematopoiesis of indeterminate potential (CHIP). There are four different kinds of clonal hematopoiesis: CHIP with driver mutation; CHIP with unkown drivers; chromosomal mosaicism; somatic loss of Y chromosome. Mosaicism is the possession of multiple genetically different cell lines in a single person that a person has 2 or more genetically different sets of cells in his or her body. A person with mosaicism may have some cells in his or her body with 46 chromosomes, but other cells have 47 chromosomes. It might be caused by an error in mitosis. Mitosis continues thoughout the lifetime and if there is an error that a cell does not split into 2 cells, the result is that some cells have the normal number of 46 chromosomes and other have more or fewer chromosomes.]]></content>
