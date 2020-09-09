@@ -114,17 +114,17 @@
 
 
 
-  <meta name="description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
+  <meta name="description" content="Here I will took a note of the problems I met because I don’t have administrative access on aws and the solution I found. (Updating…) set up jupyter notebook on aws ec2First generate ssh keypair betwe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="set up jupyter notebook on aws ec2">
+<meta property="og:title" content="What can I do if I don&#39;t have administrative access on aws?">
 <meta property="og:url" content="http://verasiwei.github.io/2020/09/03/jupyter-aws/index.html">
 <meta property="og:site_name" content="Siwei Zhang">
-<meta property="og:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
+<meta property="og:description" content="Here I will took a note of the problems I met because I don’t have administrative access on aws and the solution I found. (Updating…) set up jupyter notebook on aws ec2First generate ssh keypair betwe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-04T03:43:20.449Z">
+<meta property="og:updated_time" content="2020-09-09T02:56:47.472Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="set up jupyter notebook on aws ec2">
-<meta name="twitter:description" content="First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys f">
+<meta name="twitter:title" content="What can I do if I don&#39;t have administrative access on aws?">
+<meta name="twitter:description" content="Here I will took a note of the problems I met because I don’t have administrative access on aws and the solution I found. (Updating…) set up jupyter notebook on aws ec2First generate ssh keypair betwe">
 
 
 
@@ -141,7 +141,7 @@
   };
 </script>
 
-  <title>set up jupyter notebook on aws ec2 | Siwei Zhang</title>
+  <title>What can I do if I don't have administrative access on aws? | Siwei Zhang</title>
   
 
 
@@ -354,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">set up jupyter notebook on aws ec2
+          <h1 class="post-title" itemprop="name headline">What can I do if I don't have administrative access on aws?
               
             
           </h1>
@@ -379,12 +379,24 @@
                 
               
 
-              <time title="Created: 2020-09-03 22:32:23 / Modified: 22:43:20" itemprop="dateCreated datePublished" datetime="2020-09-03T22:32:23-05:00">2020-09-03</time>
+              <time title="Created: 2020-09-03 22:32:23" itemprop="dateCreated datePublished" datetime="2020-09-03T22:32:23-05:00">2020-09-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-09-08 21:56:47" itemprop="dateModified" datetime="2020-09-08T21:56:47-05:00">2020-09-08</time>
               
             
           </span>
@@ -426,7 +438,7 @@
 
           
           
-             <span id="/2020/09/03/jupyter-aws/" class="leancloud_visitors" data-flag-title="set up jupyter notebook on aws ec2">
+             <span id="/2020/09/03/jupyter-aws/" class="leancloud_visitors" data-flag-title="What can I do if I don't have administrative access on aws?">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -464,7 +476,8 @@
       
 
       
-        <p>First generate ssh keypair between our own computer and server.<br>To find the IP address of EC2 instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://checkip.amazonaws.com</span><br></pre></td></tr></table></figure></p>
+        <p>Here I will took a note of the problems I met because I don’t have administrative access on aws and the solution I found. (Updating…)</p>
+<h2 id="set-up-jupyter-notebook-on-aws-ec2"><a href="#set-up-jupyter-notebook-on-aws-ec2" class="headerlink" title="set up jupyter notebook on aws ec2"></a>set up jupyter notebook on aws ec2</h2><p>First generate ssh keypair between our own computer and server.<br>To find the IP address of EC2 instance<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://checkip.amazonaws.com</span><br></pre></td></tr></table></figure></p>
 <p>Then to add the public key on your computer to <code>authorized_keys</code> file under ~/.ssh folder. You may need permission or authorization to do this. Then you can use ssh client to connect to EC2 instance:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -i key username@IP address</span><br></pre></td></tr></table></figure></p>
 <p>Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bash Anaconda_you_downloaded_Linux.sh</span><br><span class="line">source .bashrc</span><br></pre></td></tr></table></figure>
@@ -561,8 +574,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -665,6 +687,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#set-up-jupyter-notebook-on-aws-ec2"><span class="nav-number">1.</span> <span class="nav-text">set up jupyter notebook on aws ec2</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -837,7 +875,7 @@
       var disqus_config = function () {
         this.page.url = 'http://verasiwei.github.io/2020/09/03/jupyter-aws/';
         this.page.identifier = '2020/09/03/jupyter-aws/';
-        this.page.title = 'set up jupyter notebook on aws ec2';
+        this.page.title = 'What can I do if I don\'t have administrative access on aws?';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');

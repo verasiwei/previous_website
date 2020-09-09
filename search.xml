@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[set up jupyter notebook on aws ec2]]></title>
+    <title><![CDATA[What can I do if I don't have administrative access on aws?]]></title>
     <url>%2F2020%2F09%2F03%2Fjupyter-aws%2F</url>
-    <content type="text"><![CDATA[First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys file under ~/.ssh folder. You may need permission or authorization to do this. Then you can use ssh client to connect to EC2 instance:1ssh -i key username@IP address Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then: 12bash Anaconda_you_downloaded_Linux.shsource .bashrc Then open jupyter notebook server 1jupyter notebook --no-browser --port=8888]]></content>
+    <content type="text"><![CDATA[Here I will took a note of the problems I met because I don’t have administrative access on aws and the solution I found. (Updating…) set up jupyter notebook on aws ec2First generate ssh keypair between our own computer and server.To find the IP address of EC2 instance1curl http://checkip.amazonaws.com Then to add the public key on your computer to authorized_keys file under ~/.ssh folder. You may need permission or authorization to do this. Then you can use ssh client to connect to EC2 instance:1ssh -i key username@IP address Install Anaconda to the EC2 instance. I don’t have sudo permission so that I installed it in my home directory. And then: 12bash Anaconda_you_downloaded_Linux.shsource .bashrc Then open jupyter notebook server 1jupyter notebook --no-browser --port=8888]]></content>
       <categories>
         <category>Programming</category>
       </categories>
